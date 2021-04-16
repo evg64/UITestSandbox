@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('build') {
             steps {
-                sh 'adb devices'
+                sh 'echo "Hello world!"'
             }
         }
     }
