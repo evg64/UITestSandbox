@@ -14,8 +14,8 @@ android {
         versionCode 1
         versionName "1.0"
 
-        testInstrumentationRunner "com.chumak.testproject.ProcessLogRunner"
-//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+//        testInstrumentationRunner "com.chumak.testproject.ProcessLogRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {

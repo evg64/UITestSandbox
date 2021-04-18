@@ -10,7 +10,7 @@ pipeline {
                 sh 'adb wait-for-device'
                 sh 'adb install -r -t /Users/a16709175/StudioProjects/TestProject2/app/build/outputs/apk/debug/app-debug.apk'
                 sh 'adb install -r -t /Users/a16709175/StudioProjects/TestProject2/app/build/outputs/apk/androidTest/debug/app-debug-androidTest.apk'
-                sh 'adb shell am instrument -w -m -e debug false -e class \'com.chumak.testproject.UITest\' com.chumak.testproject.test/com.chumak.testproject.ProcessLogRunner'
+                sh 'adb shell am instrument -w -m -e debug false -e class \'com.chumak.testproject.UITest\' com.chumak.testproject.test/androidx.test.runner.AndroidJUnitRunner'
             }
         }
     }
