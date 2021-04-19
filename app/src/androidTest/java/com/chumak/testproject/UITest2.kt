@@ -1,6 +1,5 @@
 package com.chumak.testproject
 
-import android.os.Process
 import androidx.test.espresso.Espresso.onView
 import androidx.test.espresso.action.ViewActions.click
 import androidx.test.espresso.assertion.ViewAssertions.matches
@@ -26,7 +25,7 @@ import org.junit.runner.RunWith
  */
 // @RunWith(ProcessLogRunner::class)
 @RunWith(AndroidJUnit4::class)
-class UITest {
+class UITest2 {
 
     @Rule
     @JvmField
@@ -44,10 +43,6 @@ class UITest {
 
     @Test
     fun checkButtonClick() {
-        // println("InstrumentationRegistry.getArguments().keySet() = ${InstrumentationRegistry.getArguments().keySet()}")
-        // Thread.sleep(10000)
-        println("instrumentationProcess = ${Process.myPid()}")
-        // throw RuntimeException("Test failure")
         onView(withId(R.id.resultText))
             .check(matches(withText("Started")))
         onView(withId(R.id.button))
