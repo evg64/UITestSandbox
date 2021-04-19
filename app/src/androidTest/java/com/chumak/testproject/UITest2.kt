@@ -43,6 +43,7 @@ class UITest2 {
 
     @Test
     fun checkButtonClick() {
+        throw RuntimeException("Test failure")
         onView(withId(R.id.resultText))
             .check(matches(withText("Started")))
         onView(withId(R.id.button))
