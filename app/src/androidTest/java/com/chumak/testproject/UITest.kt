@@ -47,7 +47,7 @@ class UITest {
         // println("InstrumentationRegistry.getArguments().keySet() = ${InstrumentationRegistry.getArguments().keySet()}")
         // Thread.sleep(10000)
         println("instrumentationProcess = ${Process.myPid()}")
-        throw RuntimeException("Test failure")
+        // throw RuntimeException("Test failure")
         onView(withId(R.id.resultText))
             .check(matches(withText("Started")))
         onView(withId(R.id.button))
