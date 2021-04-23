@@ -2,10 +2,19 @@ pipeline {
     agent any
     stages {
         stage('build') {
+            agent {
+                label "docker_ssh_agent"
+            }
             steps {
                 sh 'whoami'
-                sh 'printenv'
-                sh 'adb devices'
+            }
+        }
+        stage('runTests') {
+            agent {
+                label "master"
+            }
+            steps {
+                sh 'whoami'
             }
         }
     }
